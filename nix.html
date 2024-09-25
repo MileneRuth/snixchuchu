@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e o cuzinho </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bt">
+        <h1> E o cuzinho tem hoje?</h1>
+        <a href="https://youtu.be/izGwDsrQ1eQ" target="_blank"><button id="bt-sim">SIM</button> </a>
+        <button id="bt-não">NÃO</button>
+
+    <script>
+        const naoBtn = document.getElementById("bt-não");
+
+        naoBtn.addEventListener("mouseover", () => {
+            const container = naoBtn.parentElement; 
+            const maxX = container.clientWidth - naoBtn.offsetWidth;
+            const maxY = container.clientHeight - naoBtn.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY; 
+
+            naoBtn.style.left = `${randomX}px`;
+            naoBtn.style.top = `${randomY}px`;
+        });
+    </script>
+</body>
+</html>
